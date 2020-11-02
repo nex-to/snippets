@@ -16,7 +16,8 @@ This is where to store text files that don't belong to a specific project and sn
 - run this command on the cloned repo:
 `sudo chown -R gitpull:odoo13 ` [path to cloned repo]
 - create an action for the repo at .github/workflows/git-pull.yml like this:
-```name: git-pull
+```
+name: git-pull
 on:
   push:
     branches:
@@ -33,4 +34,5 @@ jobs:
           host: ${{ secrets.HOST }}
           username: gitpull
           passphrase: ${{ secrets.PASSPHRASE }}
-          privateKey: ${{ secrets.PRIVATE_KEY}}```
+          privateKey: ${{ secrets.PRIVATE_KEY}}
+```
